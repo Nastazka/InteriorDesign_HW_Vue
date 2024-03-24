@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+    </style>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="logo-img" src="../../img/Logo.svg" alt="Logo">
+            <div class="head-menu">
+                <a class="head-items" href="../../pages/index/index.html">Home</a>
+                <p class="head-items">Project</p>
+                <a class="head-items" href="../../pages/blog/blog.html">Blog</a>
+            </div>
+        </header>
+
+        <div class="intro">
+            <p class="intro-title">Let Your Home <br>Be Unique</p>
+            <p class="intro-description">There are many variations of the passages of<br>lorem Ipsum fromavailable, majority.</p>
+            <button class="start">Get Started <img class="arrow-btn" src="../../img/Vector.png" alt="arrow"></button>
+        </div>
+
+        <div class="project">
+            <p class="projects-title">Follow Our Projects</p>
+            <p class="projects-desc">It is a long established fact that a reader will be distracted by the of readable<br> content of page  lookings at its layouts  points.</p>
+            <div class="project-cards">
+
+                <div class="project-card">
+                    <img src="../../img/Image1.png" alt="project-1">
+                    <div class="project-footer">
+                        <div class="project-desc">
+                            <p class="project_title">Modern Kitchan</p>
+                            <p class="project-subtitle">Decor / Artchitecture</p> 
+                        </div>
+                        <img class="project-arrow" src="../../img/arrow.png" alt="arrow">
+                    </div>  
+                </div>
+                
+                <div class="project-card">
+                    <img src="../../img/Image2.png" alt="project-1">
+                    <div class="project-footer">
+                        <div class="project-desc">
+                            <p class="project_title">Modern Kitchan</p>
+                            <p class="project-subtitle">Decor / Artchitecture</p> 
+                        </div>
+                        <img class="project-arrow" src="../../img/arrow.png" alt="arrow">
+                    </div>  
+                </div>
+
+                <div class="project-card">
+                    <img src="../../img/Image3.png" alt="project-1">
+                    <div class="project-footer">
+                        <div class="project-desc">
+                            <p class="project_title">Modern Kitchan</p>
+                            <p class="project-subtitle">Decor / Artchitecture</p> 
+                        </div>
+                        <img class="project-arrow" src="../../img/arrow.png" alt="arrow">
+                    </div>  
+                </div>
+
+                <div class="project-card">
+                    <img src="../../img/Image4.png" alt="project-1">
+                    <div class="project-footer">
+                        <div class="project-desc">
+                            <p class="project_title">Modern Kitchan</p>
+                            <p class="project-subtitle">Decor / Artchitecture</p> 
+                        </div>
+                        <img class="project-arrow" src="../../img/arrow.png" alt="arrow">
+                    </div>  
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+    <div class="counter">
+        <div class="count">
+            <p class="count-num">12</p>
+            <p class="count-desc">Years Of Experiance</p>
+        </div>
+        <div class="count">
+            <p class="count-num">85</p>
+            <p class="count-desc">Success Project</p>
+        </div>
+        <div class="count">
+            <p class="count-num">15</p>
+            <p class="count-desc">Active Project</p>
+        </div>
+        <div class="count">
+            <p class="count-num">95</p>
+            <p class="count-desc">Happy Customers</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="blog">
+            <p class="blog-title">Articles & News</p>
+            <p class="blog-subtitle">It is a long established fact that a reader will be distracted by the of readable content of a page when lookings at its layouts the points of using.</p>
+            
+            <div id="articles-news" class="blog-articles">
+                <div class="articles-list">
+                    <article v-for="article in articlesData" :key="article.id">
+                        <img :src="article.image" alt="Изображение новости">
+                        <p class="article-title">{{ article.title }}</p>
+                        <div class="article-footer">
+                            <span class="article-date">{{ article.date }}</span>
+                            <a class="article__link">
+                                <svg
+                                    width="9"
+                                    height="16"
+                                    viewBox="0 0 9 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                    d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
+                                    stroke="#292F36"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-card">
+                <img src="../../img/Logo.svg" alt="Logo">
+                <p class="footer-desc">It is a long established fact that a reader will be distracted lookings.</p>
+                <div class="icons">
+                    <img class="twitter" src="../../img/twitter.png" alt="twitter">
+                    <img src="../../img/in.png" alt="in">
+                </div>
+            </div>
+            <div class="footer-card">
+                <p class="pages">Pages</p>
+                <p class="pages-name">Home</p>
+                <p class="pages-name">Project</p>
+                <p class="pages-name">Blog</p>
+            </div>
+            <div class="footer-card">
+                <p class="contact">Contact</p>
+                <p class="contacts">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                <p class="contacts">contact@interno.com</p>
+                <p class="contacts">(123) 456 - 7890</p>
+            </div>
+        </footer>
+    </div>
+</div>
+</body>
+</html>

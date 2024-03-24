@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+    </style>
+    <link rel="stylesheet" href="./blog-details.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js" defer></script>
+    <script src="./blog-details.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <header>
+                <img class="logo-img" src="../../img/Logo.svg" alt="Logo">
+                <div class="head-menu">
+                    <a class="head-items" href="/index.html">Home</a>
+                    <p class="head-items">Project</p>
+                    <a class="head-items" href="/blog.html">Blog</a>
+                </div>
+            </header>
+        </div>
+
+        <div class="blog-details_intro">
+            <img src="/img/Banner.jpg" alt="intro image">
+        </div>
+
+        <div class="container">
+            <div class="blog-article">
+                <div class="blog_content">
+                    <p class="article-title_max">Let’s Get Solution For Building Construction Work</p>
+                    <img class="blog-content_img" src="/img/article-img.png" alt="article image">
+                    <div class="date">
+                        <p class="article-date">26 December,2022 </p>
+                        <p class="bread_crumbs">Interior / Home / Decore</p>
+                    </div>
+                    <p class="article-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.
+                    <br><br>Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+                    <div class="quotes">
+                        <p class="marks">’’</p>
+                        <p class="quote">The details are not the details.<br>They make the design.</p>
+                    </div>
+                    <p class="article-title_max">Design sprints are great</p>
+                    <p class="article-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                    <ol class="list">
+                        <li class="list__element">Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+                        <li class="list__element">Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+                        <li class="list__element">Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+                    </ol>
+                    <img src="/img/article-img2.png" alt="article image" class="content-img">
+                    <p class="article-text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                </div>
+                <div class="tags">
+                    <span class="tags__name">Tags</span>
+                    <span v-for="tags in articles[0].tag" class="tags__element" @click="addFilter">{{tags}}</p>
+                </div>
+                <section class="articles">
+                    <div class="palette">
+                        <div v-for="article in filteredArticles" class="article" :id="article.id">
+                            <img :src="article.img" class="article__img" />
+                            <span class="article__tag">{{article.tag[0]}}</span>
+                            <h2 class="article__name">{{article.name}}</h2>
+                            <time class="article__date"
+                            >{{getDateToString(article.date)}}</time
+                            >
+                            <a class="article__link">
+                                <svg
+                                    width="9"
+                                    height="16"
+                                    viewBox="0 0 9 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                    d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
+                                    stroke="#292F36"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                      </div>
+                    </div>  
+                </section>
+                <!-- <div class="blog_sideBar">
+                    <p class="sideBar-title">Tags</p>
+                    <div class="tags">
+                        <p class="tag" id="selected">Kitchen</p>
+                        <p class="tag">Bedroom</p>
+                    </div>
+                    <div class="tags">
+                        <p class="tag">Building</p>
+                        <p class="tag">Architecture</p>
+                    </div>
+                    <div class="tags">
+                        <p class="tag">Kitchen Planning</p>
+                        <p class="tag">Bedroom</p>
+                    </div>
+                    
+                </div> -->
+            </div>
+
+            <footer>
+                <div class="footer-card">
+                    <img src="../../img/Logo.svg" alt="Logo">
+                    <p class="footer-desc">It is a long established fact that a reader will be distracted lookings.</p>
+                    <div class="icons">
+                        <img class="twitter" src="../../img/twitter.png" alt="twitter">
+                        <img src="../../img/in.png" alt="in">
+                    </div>
+                </div>
+                <div class="footer-card">
+                    <p class="pages">Pages</p>
+                    <p class="pages-name">Home</p>
+                    <p class="pages-name">Project</p>
+                    <p class="pages-name">Blog</p>
+                </div>
+                <div class="footer-card">
+                    <p class="contact">Contact</p>
+                    <p class="contacts">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                    <p class="contacts">contact@interno.com</p>
+                    <p class="contacts">(123) 456 - 7890</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

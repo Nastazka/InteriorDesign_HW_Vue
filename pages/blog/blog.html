@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+    </style>
+    <link rel="stylesheet" href="./blog.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./blog.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img class="logo-img" src="../../img/Logo.svg" alt="Logo">
+            <div class="head-menu">
+                <a class="head-items" href="../../pages/index/index.html">Home</a>
+                <p class="head-items">Project</p>
+                <a class="head-items" href="../../pages/blog/blog.html">Blog</a>
+            </div>
+        </header>
+    </div>
+
+    <div class="blog-intro">
+        <img src="/img/blog-intro.png" alt="blog-intro" class="blog-intro_img">
+        <div class="intro-text">
+            <p class="blog-intro_title">Articles & News</p>
+            <p class="blog-intro_subtitle">Home / Blog</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="latest-post">
+            <p class="latest-post_title">Latest Post</p>
+            <div class="post">
+                <img src="/img/post-img.png" alt="post-img" class="post-img">
+                <div class="post-content">
+                    <p class="content_title">Low Cost Latest Invented Interior Designing Ideas</p>
+                    <p class="content_text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief<br><br>Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
+                    <div class="article-footer">
+                        <p class="article-date">26 December,2022</p>
+                        <img src="../../img/arrow.png" alt="arrow">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blog">
+            <p class="latest-post_title">Articles & News</p>
+            
+            <div id="articles-news" class="blog-articles">
+                <div class="articles-list">
+                    <article v-for="article in articlesData" :key="article.id">
+                        <img :src="article.image" alt="Изображение новости">
+                        <p class="article-title">{{ article.title }}</p>
+                        <div class="article-footer">
+                            <span class="article-date">{{ article.date }}</span>
+                            <a class="article__link">
+                                <svg
+                                    width="9"
+                                    height="16"
+                                    viewBox="0 0 9 16"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                    d="M1.77144 14.9527L7.71429 8.267L1.77144 1.58128"
+                                    stroke="#292F36"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="page">01</button>
+                <button class="page">02</button>
+                <button class="page">03</button>
+                <button class="page">></button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-card">
+                <img src="../../img/Logo.svg" alt="Logo">
+                <p class="footer-desc">It is a long established fact that a reader will be distracted lookings.</p>
+                <div class="icons">
+                    <img class="twitter" src="../../img/twitter.png" alt="twitter">
+                    <img src="../../img/in.png" alt="in">
+                </div>
+            </div>
+            <div class="footer-card">
+                <p class="pages">Pages</p>
+                <p class="pages-name">Home</p>
+                <p class="pages-name">Project</p>
+                <p class="pages-name">Blog</p>
+            </div>
+            <div class="footer-card">
+                <p class="contact">Contact</p>
+                <p class="contacts">55 East Birchwood Ave. Brooklyn, New York 11201</p>
+                <p class="contacts">contact@interno.com</p>
+                <p class="contacts">(123) 456 - 7890</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+body {
+    width: 1920px;
+}
+
+.container {
+    width: 1200px;
+    margin:  0 360px 0 360px;
+    /* border: 1px solid black; */
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 57px;
+}
+.head-menu {
+    display: flex;
+    width: 235px;
+    justify-content: space-between;
+}
+.head-items {
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 56px;
+    text-decoration: none;
+    color: #292F36;
+}
+.head-items:hover {
+    color: #5C5C5C;
+}
+
+.blog {
+    display: flex;
+    flex-direction: column;
+}
+.blog-intro {
+    margin-bottom: 200px;
+}
+.intro-text {
+    background-color: #fff;
+    width: Fixed (503px);
+    height: Hug (178px);
+    top: 344px;
+    left: 708px;
+    padding: 41px 78px 41px 78px;
+    border-radius: 37px 37px 0 0;
+    position: absolute;
+    
+}
+.blog-intro_title {
+    font-family: DM Serif Display;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #292F36;
+    margin: 0;
+}
+.blog-intro_subtitle {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #4D5053;
+    margin: 0;
+}
+
+.latest-post_title {
+    font-family: DM Serif Display;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #292F36;
+    margin: 0;
+}
+.post {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+    margin-bottom: 150px;
+}
+.post-img {
+    margin-left: 22px;
+}
+.post-content {
+    width: 469px;
+    margin-right: 56px;
+}
+.content_title {
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #292F36;
+}
+.content_text {
+    font-family: 'Jost';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #4D5053;
+    margin-bottom: 41px;
+}
+.pagination {
+    align-self: center;
+    margin-top: 51px;
+    gap: 20px;
+    display: flex;
+}
+.page {
+    background-color: transparent;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #cda274;;
+    cursor: pointer;
+}
+
+.articles-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 21px;
+    row-gap: 30px;
+    margin-top: 52px;
+}
+article {
+    position: relative;
+    height: 521px;
+    padding: 21px;
+    border: 1px #e7e7e7 solid;
+    border-radius: 62px;
+}
+.article-title {
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    width: 330px;
+}
+.article-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.article-date {
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+.article__link {
+    position: absolute;
+    bottom: 37px;
+    right: 21px;
+    width: 52px;
+    height: 52px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #f4f0ec;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 96px;
+    margin-bottom: 134px;
+}
+.footer-desc {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    width: 393px;
+}
+.twitter {
+    margin-right: 54px;
+    
+}
+.pages {
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #292F36;
+    margin: 0;
+}
+.pages-name {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 66px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #4D5053;
+    margin: 0;
+}
+.contact {
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0;
+    color: #292F36;
+}
+.contacts {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #4D5053;
+    width: 258px;
+}
